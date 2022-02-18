@@ -1,15 +1,20 @@
 .App {
   font-family: sans-serif;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+
+.trigger {
+  width: 50px;
+  display: inline-block;
 }
 
 .pop {
   background: #eee;
+  border: 1px solid blue;
+  padding: 8px;
 }
 
 .arrow::before {
   background: #eee;
+  border: 1px solid blue;
 }

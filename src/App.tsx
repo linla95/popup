@@ -9,13 +9,65 @@ export default function App() {
         withArrow
         arrowClassName="arrow"
         popup={
-          <span className="pop">
+          <div className="pop">
             <span className="inner">go overlay</span>
-          </span>
+          </div>
         }
-        popupPlacement="bottom"
+        popupPlacement="right"
       >
-        <span>trigger</span>
+        <div className="trigger">trigger</div>
+      </Popup>
+      <Popup
+        trigger="click"
+        withArrow
+        arrowClassName="arrow"
+        popup={
+          <div className="pop">
+            <span className="inner">go overlay</span>
+          </div>
+        }
+        popupPlacement="right"
+      >
+        <div className="trigger">trigger</div>
+      </Popup>
+      <Popup
+        trigger="click"
+        withArrow
+        arrowClassName="arrow"
+        popup={
+          <div className="pop">
+            <span className="inner">go overlay</span>
+          </div>
+        }
+        popupPlacement="right"
+      >
+        <span className="trigger">trigger</span>
+      </Popup>
+      <Popup
+        trigger="click"
+        withArrow
+        arrowClassName="arrow"
+        popup={
+          <div className="pop">
+            <span className="inner">go overlay</span>
+          </div>
+        }
+        popupPlacement="right"
+      >
+        <span className="trigger">trigger</span>
+      </Popup>
+      <Popup
+        trigger="click"
+        withArrow
+        arrowClassName="arrow"
+        popup={
+          <div className="pop">
+            <span className="inner">go overlay</span>
+          </div>
+        }
+        popupPlacement="right"
+      >
+        <div className="trigger">trigger</div>
       </Popup>
     </div>
   );
