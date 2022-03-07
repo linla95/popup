@@ -73,7 +73,7 @@ function PopUp(props: IPopup) {
   const mouseDownTimerRef = useRef<number | null>(null);
   const hasPopupMouseDownRef = useRef<boolean>(false);
   const poperModifiers = useMemo(() => {
-    const tmpModifiers: StrictModifier[] = [
+    let tmpModifiers: StrictModifier[] = [
       { name: "offset", options: { offset: [0, withArrow ? 8 : 4] } }
     ];
     if (withArrow) {
@@ -90,7 +90,7 @@ function PopUp(props: IPopup) {
       });
     }
     if (modifiers) {
-      tmpModifiers.concat(modifiers);
+      tmpModifiers = tmpModifiers.concat(modifiers);
     }
     return tmpModifiers;
   }, [withArrow, modifiers, getPopupFlipBoundary, arrowElement]);

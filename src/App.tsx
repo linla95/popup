@@ -4,71 +4,25 @@ import Popup from "./Popup";
 export default function App() {
   return (
     <div className="App">
-      <Popup
-        trigger="click"
-        withArrow
-        arrowClassName="arrow"
-        popup={
-          <div className="pop">
-            <span className="inner">go overlay</span>
-          </div>
-        }
-        popupPlacement="right"
-      >
-        <div className="trigger">trigger</div>
-      </Popup>
-      <Popup
-        trigger="click"
-        withArrow
-        arrowClassName="arrow"
-        popup={
-          <div className="pop">
-            <span className="inner">go overlay</span>
-          </div>
-        }
-        popupPlacement="right"
-      >
-        <div className="trigger">trigger</div>
-      </Popup>
-      <Popup
-        trigger="click"
-        withArrow
-        arrowClassName="arrow"
-        popup={
-          <div className="pop">
-            <span className="inner">go overlay</span>
-          </div>
-        }
-        popupPlacement="right"
-      >
-        <span className="trigger">trigger</span>
-      </Popup>
-      <Popup
-        trigger="click"
-        withArrow
-        arrowClassName="arrow"
-        popup={
-          <div className="pop">
-            <span className="inner">go overlay</span>
-          </div>
-        }
-        popupPlacement="right"
-      >
-        <span className="trigger">trigger</span>
-      </Popup>
-      <Popup
-        trigger="click"
-        withArrow
-        arrowClassName="arrow"
-        popup={
-          <div className="pop">
-            <span className="inner">go overlay</span>
-          </div>
-        }
-        popupPlacement="right"
-      >
-        <div className="trigger">trigger</div>
-      </Popup>
+      {
+        [
+          'top', 'bottom', 'left', 'right',
+          'top-start', 'bottom-start', 'left-start', 'right-start',
+          'top-end', 'bottom-end', 'left-end', 'right-end'
+        ].map(direction =><Popup
+          trigger="hover"
+          withArrow
+          arrowClassName="arrow"
+          popup={
+            <div className="pop">
+              <span className="inner">overlay of {direction}</span>
+            </div>
+          }
+          popupPlacement={direction}
+        >
+          <div className="trigger">{direction}</div>
+        </Popup>)
+      }
     </div>
   );
 }
